@@ -29,8 +29,7 @@ void ucitaj(int *A, int n);
 void sortiraj(int *A, int n, poredak p);
 void stampaj(int *A, int n);
 
-int main()
-{
+int main() {
     int n;
     int p;
 

@@ -26,8 +26,7 @@ int iznadDijagonale(int *A, int n);
 int ispodDijagonale(int *A, int n);
 int naDijagonali(int *A, int n);
 
-int main()
-{
+int main() {
     int n;
 
     cout << "Unesite dimenziju kvadratne matrice:" << endl;

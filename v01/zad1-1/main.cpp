@@ -14,8 +14,7 @@
 
 using namespace std;
 
-int main()
-{
+int main() {
     int m = 0; // najveći broj
     int br; // uneti broj
 

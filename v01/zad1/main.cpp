@@ -14,8 +14,7 @@
 
 using namespace std;
 
-int main()
-{
+int main() {
     int s; // sabirak
     int zb = 0; // zbir
 

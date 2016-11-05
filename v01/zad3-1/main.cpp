@@ -18,8 +18,7 @@ using namespace std;
 
 double f(int n);
 
-int main()
-{
+int main() {
     int n;
 
     cout << "Unesite broj:" << endl;

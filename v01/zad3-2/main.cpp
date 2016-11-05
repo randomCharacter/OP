@@ -13,11 +13,12 @@
 
 using namespace std;
 
-int izracunaj(int n);
-int izracunaj(int n, int cena);
+// Računa cenu svih karata ako cena jedne jeste navedena
+int izracunaj(int n, int cena = 50) {
+    return cena * n;
+}
 
-int main()
-{
+int main() {
     int n, cena, s;
 
     cout << "Unesite broj karata:" << endl;
@@ -36,12 +37,3 @@ int main()
     return 0;
 }
 
-// Računa cenu svih karata ako cena jedne nije navedena
-int izracunaj(int n) {
-    return 50 * n;
-}
-
-// Računa cenu svih karata ako cena jedne jeste navedena
-int izracunaj(int n, int cena) {
-    return cena * n;
-}

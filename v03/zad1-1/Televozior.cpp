@@ -4,7 +4,7 @@
 Televizor::Televizor() {
     stanje = ISKLJUCEN;
     zvuk = 0;
-    kanal = 2;
+    kanal = 1;
 }
 
 // Konstruktor koji kopira
@@ -86,6 +86,9 @@ bool Televizor::sledeciKanal() {
     if (stanje == UKLJUCEN) {
         kanal++;
         kanal %= 5;
+        if (kanal == 0) {
+            kanal = 5;
+        }
         return true;
     }
     return false;
@@ -96,6 +99,9 @@ bool Televizor::prethodniKanal() {
     if (stanje == UKLJUCEN) {
         kanal--;
         kanal %= 5;
+        if (kanal == 0) {
+            kanal = 5;
+        }
         return true;
     }
     return false;

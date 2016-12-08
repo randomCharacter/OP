@@ -9,7 +9,7 @@ class Vreme {
     private:
         int sekunde;
     public:
-        Vreme(int sekunde = 0, int minuti = 0, int sati = 0);
+        Vreme(int = 0, int = 0, int = 0);
         Vreme(Vreme&);
 
         friend Vreme operator-(const Vreme&, const Vreme&);

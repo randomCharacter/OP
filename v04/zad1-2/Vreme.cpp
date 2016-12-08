@@ -22,16 +22,19 @@
  */
 #include "Vreme.hpp"
 
+// Podrazumevani konstruktor
 Vreme::Vreme(int sekunde, int minuti, int sati) {
     this->sekunde = sekunde;
     this->sekunde += 60 * minuti;
     this->sekunde += 3600 * sati;
 }
 
+// Konstruktor kopije
 Vreme::Vreme(Vreme& v) {
     this->sekunde = v.sekunde;
 }
 
+// Aritmetički operatori
 Vreme operator-(const Vreme& v1, const Vreme& v2) {
     Vreme w(v1.sekunde - v2.sekunde);
     return w;
@@ -42,6 +45,7 @@ Vreme operator+(const Vreme& v1, const Vreme& v2) {
     return w;
 }
 
+// Operatori dodele
 Vreme& Vreme::operator=(const Vreme& v) {
     this->sekunde = v.sekunde;
     return *this;
@@ -57,28 +61,33 @@ Vreme& Vreme::operator-=(const Vreme& v) {
     return *this;
 }
 
+// Prefiksni operator --
 Vreme& Vreme::operator--() {
     --this->sekunde;
     return *this;
 }
 
+// Postfiksni operator --
 Vreme Vreme::operator--(int) {
     Vreme v(this->sekunde);
     this->sekunde--;
     return v;
 }
 
+// Prefiksni operator ++
 Vreme& Vreme::operator++() {
     ++this->sekunde;
     return *this;
 }
 
+// Postfiksni operator ++
 Vreme Vreme::operator++(int) {
     Vreme v(this->sekunde);
     this->sekunde++;
     return v;
 }
 
+// Operatori poređenja
 bool operator==(Vreme& v1, Vreme& v2) {
     return (v1.sekunde == v2.sekunde);
 }
@@ -103,11 +112,13 @@ bool operator>=(Vreme& v1, Vreme& v2)  {
     return (v1.sekunde >= v2.sekunde);
 }
 
+// Operator učitavanja
 istream& operator>>(istream& in, Vreme& v) {
     in >> v.sekunde;
     return in;
 }
 
+// Operator ispisa
 ostream& operator<<(ostream& out, const Vreme& v) {
     out << "Preostalo vreme: ";
     int sekunde = v.sekunde;

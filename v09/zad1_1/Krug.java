@@ -2,7 +2,7 @@ package zad1_1;
 
 public class Krug {
 	
-	double r;
+	private double r;
 
 	public Krug(double r) {
 		super();
